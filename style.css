@@ -1,0 +1,856 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body::-webkit-scrollbar 
+{
+    background-color: #222;
+    border-radius: 50px;
+    width: 12px;
+    padding: 3em;
+}
+body::-webkit-scrollbar-corner 
+{
+    background-color: #fff;
+    border-radius: 100vw;
+    width: 10px;
+}
+body::-webkit-scrollbar-button 
+{
+    display: none;
+    border-radius: 50px;
+}
+body::-webkit-scrollbar-thumb 
+{
+    background-color: #fff!important;
+    border-radius: 50px;
+    width: 12px;
+    padding: 5em;
+    border: .25em solid #fff;
+}
+body::-webkit-scrollbar-thumb 
+{
+    background-color: crimson!important;
+    border-radius: 50px;
+    width: 12px;
+    padding: 5em;
+    border: .25em solid #fff;
+}
+
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 30px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s;
+}
+.scroll-up-btn .show{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+
+
+/* ---------------------------------------code de la navbar------------------------ */
+.navbar.sticky {
+    transition: all 0.5s;
+    padding: 15px;
+    background-image: linear-gradient(to bottom, rgb(220, 29, 68),rgb(220, 50, 79))
+}
+
+.navbar.sticky .logo span {
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.navbar {
+
+    background-image: linear-gradient(to bottom, rgb(49, 48, 48), rgb(29, 28, 28));
+    position: fixed;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    display: flex;
+    z-index: 999;
+    transition: all 0.5s;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 50px;
+   margin-left: 20%;
+}
+
+.max-widths {
+    max-width: 1300px;
+    padding:0 20px;
+
+}
+
+.menu-btn {
+    color: #fff;
+    cursor: pointer;
+    font-size: 23px;
+    display: none;
+}
+
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    margin-left: 0;
+
+}
+
+.navbar .logo a span {
+    color: crimson;
+}
+.logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    margin-left: 0;
+    float: left;
+    padding-bottom: 10px;
+
+}
+.logo a span {
+    color: crimson;
+}
+.navbar-menu li a {
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    color: #ffffff;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.navbar .menu li {
+    display: inline-block;
+    list-style: none;
+
+}
+
+/* ------------------------------------------code de la partie juste apres la navar------------------------------ */
+.home {
+    height: 100vh;
+    background-image: url(images/background.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    min-height: 500px;
+
+
+}
+
+.home-content {
+    padding-top: 20%;
+    margin-left: 20%;
+}
+
+.home .max-width {
+    margin: auto 0 auto 40px;;
+}
+
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+    font-size: 27px;
+    margin: 5px 0;
+}
+
+
+.home .home-content .text-3 span {
+    color: crimson;
+    font-weight: 500;
+}
+.home .home-content a{
+    display:inline-block;
+    background-color: crimson;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    padding:12px 36px ;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.5s;
+}
+/* apropos */
+section{
+    padding: 100px 0;
+}
+
+.about {
+    font-family:'Times New Roman', Times, serif
+}
+.about-title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom:60px ;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    border-radius: 6px;
+    object-fit: cover;
+
+}
+.about-title::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background-color: #111;
+    transform:translateX(-50%) ;
+}
+
+.about-title::after{
+    content: "Qui Suis-je";
+    position: absolute;
+    color: crimson;
+    width: 180px;
+    height: 5px;
+    bottom: -8px;
+    left: 50%;
+    padding: 5px;
+    font-size: 20px;
+    
+    transform:translateX(-50%) ;
+}
+
+.about .about-content {
+
+    display:flex ;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: -10%;
+}
+
+.about .about-content .left{
+
+    width: 45%;
+}
+.about .about-content .right{
+    
+    width: 55%;
+
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.about .about-content .right .text span{
+
+    color: crimson;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a{
+    display:inline-block;
+    background-color: crimson;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding:10px 30px ;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 01s;
+}
+.about .about-content .right a:hover{
+    color: crimson;
+    background:none;
+}
+
+
+/* ----------------------------------services----------------------------------------- */
+.Services{
+    color: #fff;
+    background: #111;
+
+}
+.services-content{
+    display: flex;
+}
+
+.title::before{
+    background-color: #ffffff;
+    position: absolute;
+    content: "";
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    height: 3px;
+    width: 180px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+.title::after{
+    background-color: #111;
+    content: "Mes services";
+     content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    background: #fff;
+    transform: translateY(-50px); 
+
+}
+.box{
+    transition: all 0.5s;
+}
+.card{
+    width:calc(33% - 20px);
+    background-color: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    display: flex;
+    margin-left: auto;
+}
+.card i{
+    font-size: 50px;
+    color: crimson;
+    transition: all 0.5s;
+}
+.tex{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+
+}
+
+/* ------------------------------------------------------------ Competences------------------------------------------- */
+
+.competences .title::after{
+    content: "Qu'est ce que je sais faire ?";
+
+}
+.competences-content .column{
+    width:calc(80% - 30px) ;
+
+}
+.competences-content .left .text{
+    width:calc(80% - 30px) ;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.competences-content .left p{
+    text-align: justify;
+}
+.competences-content .left a{
+    display:inline-block;
+    background-color: crimson;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding:8px 16px ;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 01s;
+}
+.competences-content .left a:hover{
+
+    color: crimson;
+    background:none;
+    font-weight: 600;
+    font-size: 25px;
+}
+.competences-content .right .bars{
+   
+    margin-bottom: 15px;
+}
+.competences-content .right .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.competences-content .right .span{
+    font-weight: 500;
+    font-size: 18px;
+
+}
+
+.html{
+    height: 5px;
+    width: 90%;
+    background: crimson;
+    margin-bottom: 5px;
+}
+.css{
+    height: 5px;
+    width: 60%;
+    background: crimson;
+}
+.python{
+    height: 5px;
+    width: 40%;
+    background: crimson;
+}
+.php{
+    height: 5px;
+    width: 30%;
+    background: crimson;
+}
+.sql{
+    height: 5px;
+    width: 50%;
+    background: crimson;
+}
+.js{
+    height: 5px;
+    width: 50%;
+    background: crimson;
+}
+
+/* ----------------------------------------projet----------------------------- */
+
+.img{
+    margin: auto;
+    margin-left: 15px;
+}
+.projets{
+    background-color: #111;
+    color: #fff;
+}
+.big{
+    color: #fff;
+    display: flex;
+}
+.texts{
+   text-align: center;
+   padding: 15px;
+   border-bottom: solid crimson 3px;
+   width: 300px;
+   margin-left: 40%;
+   margin-bottom:5%;
+}
+.suites{
+   
+    width:calc(30% - 10px);
+    background-color: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    margin-left: 50px;
+    transition: all 1s;
+}
+.pro-link{
+    color: crimson;
+    padding: 10%;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+
+
+
+/* -------------------------------------------------------contact------------------------------------- */
+
+.contact .contact-content .column {
+    width: calc(50% - 30px);
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.first-input{
+    width: 100%;
+    display: flex;
+    color: crimson;
+     resize: none;
+     padding-top: 10px;
+     width: 50%;
+      border-radius: 6px;
+     border: none;
+     border-bottom: solid 3px #222;
+        font-size: 17px;
+         padding: 0 15px;
+         margin:auto;
+         margin-bottom: 5%;
+}
+i{
+ 
+    
+    font-size: 30px;
+    color: crimson;
+    transition: all 0.5s;
+}
+.inputs{
+    width: 100%;
+}
+button{
+    display:inline-block;
+    background-color: crimson;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding:10px 30px ;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 01s;
+}
+
+
+
+/* -------------------------------------footer----------------------------------------------- */
+
+.foot{
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------- Pour les Hover----------------------------------------------------------- */
+
+
+
+button:hover{
+    display:inline-block;
+    background: none;
+    text-decoration: none;
+    color: #222;
+    font-size: 20px;
+    padding:10px 30px ;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 01s;
+}
+
+
+
+.suites:hover{
+   
+    background: crimson; 
+     transition: all 1s;
+     color: #fff;
+    transform: scale(1.05) ;
+    
+}
+.pro-link:hover{
+    text-decoration: none;
+   
+     color: #fff;
+
+    
+}
+
+
+.card:hover{
+    background: crimson; 
+     transition: all 1s;
+}
+.card:hover .box{
+    transform: scale(1.05) ;
+}
+.card:hover i{
+    color: #fff;
+  
+}
+
+.home .home-content a:hover{
+    color: #fff;
+    background:none;
+}
+
+.navbar-menu li a:hover {
+    font-size: 20px;
+    font-weight: 500;
+    color: crimson;
+
+}
+
+
+
+/* responsive */
+
+@media (max-width: 947px) {
+
+    .ul-menu {
+        display: block;
+    }
+
+    .span-ul {
+        display: inline-flex;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .about .about-content .column{
+        width: 50%;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu .menu.active {
+        left: 0;
+    }
+
+    .max-width {
+        padding: 0 50px;
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: 0;
+        top: 0;
+        
+        background-color: rgb(62, 80, 84);
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    .navbar .menu li {
+        display: block;
+
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+
+    }
+
+    .menu {
+        margin: 0;
+    }
+
+
+    .home .home-content .text-2 {
+        font-size: 75px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 35px;
+    }
+
+}
+
+
+@media (max-width: 1330px) {
+    .home .max-width {
+        left: 0;
+    }
+
+
+
+}
+
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+        
+    
+    }
+
+
+}
+
+@media (max-width: 961px) {
+    .max-width {
+        padding: 0 50px;
+    }
+    .home {
+        height: 100vh;
+        background-image: url(images/background.png);
+        width: 100%;
+        background-repeat: no-repeat;
+       
+        color: white;
+        min-height: 500px;
+    
+    
+    }
+
+    .about .about-content{
+        display: inline-block;
+    }
+    .about .about-content .right .text{
+        font-size: 15px;
+        margin-bottom: 05px;
+        font-weight: 300;
+    }
+
+}
+
+@media (max-width: 690px) {
+
+    .max-width {
+        padding: 0 23px;
+    }
+.home .home-content .text-2 {
+    font-size: 60px;
+}
+
+.home .home-content .text-3 {
+    font-size: 32px;
+}
+.home .home-content a{
+    font-size: 20px;
+    padding: 08px 20px;
+}
+.home-content {
+    margin-top: 50px;
+}
+.about .about-content{
+    display: inline-block;
+}
+.about .about-content .right .text{
+    font-size: 15px;
+    margin-bottom: 05px;
+    font-weight: 300;
+}
+
+}
+
+@media (max-width: 500px) {
+
+    .max-width {
+        padding-top: 50px;
+    }
+    .home .home-content .text-1 {
+        margin-top:30px;
+    }
+        
+.home .home-content .text-2 {
+    font-size: 50px;
+}
+
+.home .home-content .text-3 {
+    font-size: 27px;
+}
+
+
+
+}
+@media (max-width: 375px) {
+
+    .max-width {
+        padding-top: 50px;
+    }
+    .home .home-content .text-1 {
+        margin-top:30px;
+    }
+        
+.home .home-content .text-2 {
+    font-size: 25px;
+}
+
+.home .home-content .text-3 {
+    font-size: 15px;
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1381px) {
+    .navbar .logo a {
+        color: #fff;
+        font-size: 35px;
+        font-weight: 600;
+        margin-left: 0;
+    }
+}
